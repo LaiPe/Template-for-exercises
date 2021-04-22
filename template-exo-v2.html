@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Titre de l'exercice</title>
+        <style>
+            :root{
+                font-family: Arial, Helvetica, sans-serif;
+                --couleur-foncé: #143b7e;
+                --couleur-claire: #6c96df;
+            }
+            body{
+                margin: 0;padding: 0;
+            }
+            header{
+                padding: 45vh 0;
+                text-align: center;
+                background-color: var(--couleur-foncé);
+                position: relative;
+            }
+            header h1{
+                font-size: 10vh;
+                color: rgb(255, 255, 255);
+                margin: 0;
+            }
+            header::before{
+                content:"";
+                position: absolute;
+                height: 50px;
+                bottom: -50px; right: 0; left: 0;
+                background-color: var(--couleur-foncé);
+                border-bottom-left-radius: 50px; border-bottom-right-radius: 50px;
+            }
+            #description-fichier{
+                background-color: var(--couleur-claire);
+                padding: 70px 40px 50px 40px;
+                font-family: 'Courier New', Courier, monospace;
+                border-bottom-left-radius: 50px; border-bottom-right-radius: 50px;
+            }
+            #description-fichier ul li{
+                margin: 3px 0px;
+            }
+            #description-fichier ul{
+                margin: 0;
+            }
+            #description-fichier #nom-fichier::before{
+                content:"Nom du fichier:";
+                text-decoration: underline;
+            }
+            #description-fichier #date::before{
+                content:"Date:";
+                text-decoration: underline;
+            }
+            #description-fichier #auteur::before{
+                content:"Auteur:";
+                text-decoration: underline;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Titre de l'exercice</h1>
+        </header>
+        <main>
+            <div id="description-fichier">
+                <h2>Description du Fichier</h2>
+                <ul>
+                    <li id="nom-fichier"> template-exo-v2</li>
+                    <li id="date"><time datetime="2021-04-22"> 22/04/2021</time></li>
+                    <li id="auteur"> Léo Peyronnet</li>
+                    <li><a href="#">Télécharger le fichier</a></li>
+                </ul>
+            </div>
+        </main>
+    </body>
+</html>
